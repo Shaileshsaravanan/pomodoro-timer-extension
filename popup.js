@@ -1,10 +1,12 @@
 let timer;
-let timeLeft = 25 * 60;
+let defaultTime = 25 * 60;
+let timeLeft = defaultTime;
 let isRunning = false;
 
 const startButton = document.getElementById('start-btn');
 const resetButton = document.getElementById('reset-btn');
 const timerDisplay = document.getElementById('timer');
+const customTimeInput = document.getElementById('custom-time');
 
 function updateTimerDisplay() {
     const minutes = Math.floor(timeLeft / 60);
@@ -15,11 +17,19 @@ function updateTimerDisplay() {
 function startTimer() {
     if (isRunning) return;
     isRunning = true;
+
+    const customTime = parseInt(customTimeInput.value);
+    if (!isNaN(customTime) && customTime > 0) {
+        timeLeft = customTime * 60;
+    } else {
+        timeLeft = defaultTime;
+    }
+
     timer = setInterval(() => {
         if (timeLeft <= 0) {
             clearInterval(timer);
             isRunning = false;
-            timeLeft = 25 * 60; // reset to 25 minutes after completion
+            timeLeft = defaultTime; // reset to default time after completion
             updateTimerDisplay();
             alert("Pomodoro Complete!");
         } else {
@@ -32,8 +42,9 @@ function startTimer() {
 function resetTimer() {
     clearInterval(timer);
     isRunning = false;
-    timeLeft = 25 * 60;
+    timeLeft = defaultTime;
     updateTimerDisplay();
+    customTimeInput.value = ''; // clear custom time input
 }
 
 startButton.addEventListener('click', startTimer);

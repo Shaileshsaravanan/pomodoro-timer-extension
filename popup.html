@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <script src="tailwind.js"></script>
 </head>
 <body class="bg-gray-100 flex flex-col items-center justify-center h-screen p-4">
     <div class="w-full max-w-xs bg-white rounded-lg shadow-lg p-6">
         <h1 class="text-2xl font-bold text-center mb-4">Pomodoro Timer</h1>
         <div id="timer" class="text-4xl text-center font-mono mb-4">25:00</div>
-        <button id="start-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+        <input id="custom-time" type="number" min="1" max="120" placeholder="Enter minutes" class="w-full mb-4 p-2 border rounded">
+        <button id="start-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-2">
             Start
         </button>
-        <button id="reset-btn" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-2">
+        <button id="reset-btn" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
             Reset
         </button>
     </div>
