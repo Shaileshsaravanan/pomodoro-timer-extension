@@ -17,7 +17,7 @@ A simple and customizable Pomodoro Timer browser extension built with HTML, Java
 1. **Clone or Download the Repository**: 
 
    ```
-   git clone https://github.com/yourusername/pomodoro-extension.git
+   git clone https://github.com/shaileshsaravanan/pomodoro-timer-extension.git
    ```
 
    Or download the `.zip` file and extract it.
@@ -52,28 +52,17 @@ pomodoro-extension/
 ├── manifest.json       # Extension configuration file
 ├── popup.html          # HTML structure of the extension popup
 ├── popup.js            # JavaScript functionality for the timer
-├── styles.css          # (Optional) Additional custom CSS
-├── tailwind.config.js  # Tailwind CSS configuration (optional)
-└── icons/
-    └── icon.png        # Icon for the extension
+└── tailwind.js         # Tailwind CSS configuration (optional)
 ```
 
 ## Customization
 
-- **Styling**: Customize the look and feel by editing `styles.css` or configuring Tailwind CSS in `tailwind.config.js`.
 - **Timer Logic**: Modify the timer duration, alerts, or other functionality by editing `popup.js`.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
 Contributions are welcome! Feel free to submit a pull request or open an issue to suggest improvements or report bugs.
-
-## Screenshots
-
-![Pomodoro Timer](https://path-to-screenshot.png)
 
 ---
 
